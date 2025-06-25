@@ -1,0 +1,136 @@
+/* css/header_kekinian.css */
+
+.main-header {
+    background-color: #333; /* Warna latar belakang gelap */
+    color: #fff; /* Warna teks putih */
+    padding: 20px 0; /* Padding atas dan bawah */
+    text-align: center; /* Teks di tengah */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan untuk kedalaman */
+    position: relative; /* Diperlukan untuk z-index */
+    z-index: 1000; /* Pastikan header di atas peta */
+    width: 100%;
+    box-sizing: border-box; /* Pastikan padding tidak menambah lebar */
+    font-family: 'Poppins', sans-serif; /* Menerapkan font Poppins */
+}
+
+.header-content {
+    max-width: 960px; /* Batasi lebar konten */
+    margin: 0 auto; /* Tengah konten */
+    padding: 0 20px; /* Padding samping */
+}
+
+.main-header h1 {
+    margin: 0 0 10px 0; /* Margin bawah untuk judul */
+    font-size: 2.5em; /* Ukuran font judul lebih besar */
+    font-weight: 700; /* Tebal */
+    letter-spacing: 1px; /* Jarak antar huruf */
+    font-family: 'Poppins', sans-serif; /* Menerapkan font Poppins untuk judul */
+}
+
+.main-header p {
+    margin: 0;
+    font-size: 1.1em; /* Ukuran font deskripsi */
+    opacity: 0.9; /* Sedikit transparan */
+}
+
+/* Responsiveness (optional, but good practice) */
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 1.8em;
+    }
+    .main-header p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        padding: 15px 0;
+    }
+    .main-header h1 {
+        font-size: 1.5em;
+    }
+    .header-content {
+        padding: 0 10px;
+    }
+}
+.leaflet-control-layers {
+    background-color: rgba(255, 255, 255, 0.9); /* Latar belakang semi-transparan */
+    border-radius: 8px; /* Sudut membulat */
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Bayangan lembut */
+    font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
+    font-size: 0.9em; /* Ukuran font lebih kecil */
+    max-height: 80%; /* Batasi tinggi maksimum */
+    overflow-y: auto; /* Aktifkan scroll jika konten melebihi max-height */
+}
+
+/* Mengatur tombol ikon "layers" */
+.leaflet-control-layers-toggle {
+    width: 36px; /* Ukuran ikon */
+    height: 36px;
+    background-size: 24px 24px; /* Ukuran ikon di dalamnya */
+}
+
+/* Mengatur jarak antar elemen dalam legenda */
+.leaflet-control-layers-tree .leaflet-layerstree-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.leaflet-control-layers-tree .leaflet-layerstree-children li {
+    margin-bottom: 3px; /* Jarak vertikal antar item layer */
+}
+
+.leaflet-control-layers-tree .leaflet-layerstree-row {
+    padding: 3px 0; /* Padding setiap baris item legenda */
+}
+
+/* Mengatur ukuran ikon legenda (jika menggunakan gambar) */
+.leaflet-control-layers-tree .leaflet-layerstree-row img {
+    max-width: 24px; /* Lebar maksimum ikon */
+    max-height: 24px; /* Tinggi maksimum ikon */
+    vertical-align: middle; /* Sejajarkan ikon dengan teks */
+    margin-right: 8px; /* Jarak antara ikon dan teks */
+    border-radius: 4px; /* Sedikit membulat pada ikon */
+}
+
+/* Menyesuaikan tampilan checkbox/radio button */
+.leaflet-control-layers-tree .leaflet-layerstree-checkbox,
+.leaflet-control-layers-tree .leaflet-layerstree-radio {
+    margin-right: 5px; /* Jarak antara checkbox dan teks */
+    /* Anda bisa menambahkan gaya kustom untuk checkbox/radio di sini jika ingin mengubah tampilannya lebih jauh */
+}
+
+/* Menyesuaikan teks label layer */
+.leaflet-control-layers-tree label {
+    display: flex; /* Menggunakan flexbox untuk perataan yang lebih baik */
+    align-items: center; /* Pusatkan item secara vertikal */
+    cursor: pointer; /* Menunjukkan bahwa itu bisa diklik */
+    color: #555;
+}
+
+/* Ketika legenda terbuka */
+.leaflet-control-layers.leaflet-control-layers-expanded {
+    padding-right: 20px; /* Tambahkan sedikit padding kanan agar tidak terlalu sempit */
+}
+
+/* Scrollbar styling (untuk browser WebKit - Chrome, Safari) */
+.leaflet-control-layers::-webkit-scrollbar {
+    width: 8px;
+}
+
+.leaflet-control-layers::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.leaflet-control-layers::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.leaflet-control-layers::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
